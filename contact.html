@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AstroWear | Space-Themed Fashion Store</title>
+
+    <!-- SEO Description -->
+    <meta
+      name="description"
+      content="Explore the latest in space-inspired fashion at AstroWear. Shop premium quality t-shirts, hoodies, caps, and more. Fast shipping and secure checkout."
+    />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="AstroWear | Space-Inspired Clothing & Accessories"
+    />
+    <meta
+      property="og:description"
+      content="Discover unique, high-quality apparel with a cosmic twist. From galaxy tees to astronaut hoodies – AstroWear has something for every space enthusiast."
+    />
+    <meta property="og:image" content="./img/logo.png" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Animate on Scroll -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/f1.ico" />
+  </head>
+
+
+  <body>
+
+    <div class="down-menu toggle">
+          <ul class="nav-links">
+          <li><a class="home-link-navigation" href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon" aria-label="View Cart">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+            </a>
+          </li>
+        </ul>
+    </div>
+
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./img/logo.png" alt="logo_image" />
+        </div>
+
+        <i  class="fa-solid fa-square-caret-down menu" onclick="Menu()"></i>
+        <ul class="nav-links">
+          <li><a class="home-link-navigation" href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon" aria-label="View Cart">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+       <section class="signup">
+        <div class="container">
+          <div class="signuptext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>
+              Get E-mail updates about our latest shop and
+              <span>special offers</span>
+            </p>
+          </div>
+          <form action="">
+            <input
+              class="email"
+              type="email"
+              placeholder="Your email address"
+              required
+            />
+            <input class="button" type="sumit" value="Sign Up" />
+          </form>
+        </div>
+      </section>
+</main>
+
+    <footer>
+        <div class="container">
+        <div>
+            <img class="logo" src="./img/logo.png" alt="logo-image">
+            
+            <div class="contact">
+                <h5>Contact</h5>
+            <p><span>Address</span>: naser city</p>
+            <p><span>Phone</span>: +201270857659</p>
+            <p><span>Hours</span> : From 10:00AM To 10:00PM </p>
+            </div>
+            <div class="follow">
+                <h5>
+                    Follow US
+                </h5>
+                <div class="social-media">
+                    <i  class="fa-brands fa-facebook"></i>
+                    <i  class="fa-brands fa-linkedin"></i>
+                    <i  class="fa-brands fa-whatsapp"></i>
+                    <i  class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+
+            <div class="About">
+                <h5>About</h5>
+                <p>About US</p>
+                <p>Delivery information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+        <div class="account"> 
+            <h5>My Account</h5>
+            <p>Sign in</p>
+            <p>View Cart</p>
+            <p> My Wishlist</p>
+            <p>track My Order</p>
+            <p>Help</p>
+        </div>
+        <div class="install">
+            <h5>Install App</h5>
+            <p>From App Store or Google play</p>
+
+            <div>
+                <img src="./img/pay/app.jpg"  alt="payment-image">
+                <img src="./img/pay/play.jpg" alt="payment-image">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <div>
+                <img class="pay" src="./img/pay/pay.png" alt="payment-image">
+            </div>
+        </div>
+        </div>
+        <p class="copyRight">2025,HTML CSS Ecommence templete</p>
+
+    </footer>
+
+        <script>
+      let menuDown = document.getElementsByClassName("down-menu")[0];
+      let menu = document.querySelector(".fa-square-caret-down");
+      let blogContainer=document.querySelector(".blog");
+
+
+
+      function Menu() {
+
+
+        menuDown.classList.add("toggle");
+
+        if (menu.classList.contains("fa-square-caret-down")) {
+          // إذا كانت الأيقونة تشير إلى "سهم لأسفل"، اعرض القائمة وبدّل الأيقونة
+          menuDown.classList.remove("toggle");
+          menu.classList.remove("fa-square-caret-down");
+          menu.classList.add("fa-square-caret-up");
+        } else {
+          menuDown.classList.add("toggle");
+          menu.classList.remove("fa-square-caret-up");
+          menu.classList.add("fa-square-caret-down");
+        }
+      }
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AstroWear | Space-Themed Fashion Store</title>
+
+    <!-- SEO Description -->
+    <meta
+      name="description"
+      content="Explore the latest in space-inspired fashion at AstroWear. Shop premium quality t-shirts, hoodies, caps, and more. Fast shipping and secure checkout."
+    />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="AstroWear | Space-Inspired Clothing & Accessories"
+    />
+    <meta
+      property="og:description"
+      content="Discover unique, high-quality apparel with a cosmic twist. From galaxy tees to astronaut hoodies – AstroWear has something for every space enthusiast."
+    />
+    <meta property="og:image" content="./img/logo.png" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Animate on Scroll -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        .banner{
+            margin-top: 3.8em;
+            background: url('./img/about/banner.png');
+            min-height: 30vh;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-bottom:5em;
+        }
+        .about-section{
+            display: flex;
+           align-items: center;
+           justify-content:space-around;
+           flex-wrap: wrap;
+        }
+        .about-section .image{
+            background: url('./img/about/a6.jpg');
+            min-height: 60vh;
+            width: 50%;
+            background-position: 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 5em;
+        }
+        .about-section div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            width: 40%;
+        }
+         .banner h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            min-height: 30vh;
+            font-weight: 700;
+            color: aliceblue;
+            font-size: 2.5em;
+        }
+
+                .view {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10em;
+        }
+        .view h2{
+            text-align: center;
+            margin-bottom: 1em;
+
+        }
+        .view video{
+            width: 60em;
+            border-radius: 1em;
+            
+        }
+        @media (max-width:1300px) {
+                   .about-section{
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+           justify-content:space-around;
+           flex-wrap: wrap;
+           
+        }
+        .about-section .image{
+            background: url('./img/about/a6.jpg');
+            min-height: 60vh;
+            width: 80%;
+            background-position: 50%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-bottom: 5em;
+            
+        }
+        .about-section div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            margin-bottom: 10em;
+        }
+        .about-section h2{
+            margin-top: -03em;
+            margin-bottom: 5px;
+            font-size: 1.6em;
+        }
+        .about-section p{
+            color: rgb(88, 86, 86);
+            width: 100%;
+            margin-bottom: 2em;
+            font-weight: 500;
+            
+        }
+
+        .view video{
+            width: 40em;
+            border-radius: 1em;
+            
+        }
+        }
+
+        @media (max-width:800px) {
+             .view video{
+            width: 24em;
+            border-radius: 1em;
+            
+        }
+        }
+       
+    </style>
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/f1.ico" />
+  </head>
+
+
+  <body>
+
+    <div class="down-menu toggle">
+          <ul class="nav-links">
+          <li><a class="home-link-navigation" href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon" aria-label="View Cart">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+            </a>
+          </li>
+        </ul>
+    </div>
+
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./img/logo.png" alt="logo_image" />
+        </div>
+
+        <i  class="fa-solid fa-square-caret-down menu" onclick="Menu()"></i>
+        <ul class="nav-links">
+          <li><a  href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="home-link-navigation" href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon" aria-label="View Cart">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+      <main>
+         <section class="banner">
+            <h2>#KnowUs</h2>
+         </section>
+
+   <section class="about-section">
+  <div class="image"></div>
+  
+  <div>
+    <h2>About Us</h2>
+    <p>
+      Welcome to <strong>TrendVibe</strong>, your ultimate destination for the latest in fashion. 
+      We believe in empowering confidence through style. From timeless classics to bold modern looks, 
+      our collections are designed to help you express your unique personality with every outfit.
+      Quality, comfort, and creativity are woven into every piece we offer.
+      Join thousands of happy customers who trust us to keep their wardrobe fresh and fashionable.
+    </p>
+    </div>
+  
+</section>
+
+<section class="view">
+       <h2>Download Our App</h2>
+       <video  src="./img/about/1 (1).mp4" loop muted autoplay></video>
+</section>
+
+
+
+
+       <section class="signup">
+        <div class="container">
+          <div class="signuptext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>
+              Get E-mail updates about our latest shop and
+              <span>special offers</span>
+            </p>
+          </div>
+          <form action="">
+            <input
+              class="email"
+              type="email"
+              placeholder="Your email address"
+              required
+            />
+            <input class="button" type="sumit" value="Sign Up" />
+          </form>
+        </div>
+      </section>
+
+      
+      <section class="feature">
+        <div class="features">
+          <div class="feature-item">
+            <img src="./img/features/f1.png" alt="feature-image" />
+          </div>
+          <div class="feature-item">
+            <img src="./img/features/f2.png" alt="feature-image" />
+          </div>
+          <div class="feature-item">
+            <img src="./img/features/f3.png" alt="feature-image" />
+          </div>
+          <div class="feature-item">
+            <img src="./img/features/f4.png" alt="feature-image" />
+          </div>
+          <div class="feature-item">
+            <img src="./img/features/f5.png" alt="feature-image" />
+          </div>
+          <div class="feature-item">
+            <img src="./img/features/f6.png" alt="feature-image" />
+          </div>
+        </div>
+      </section>
+
+
+      </main>
+
+    <footer>
+        <div class="container">
+        <div>
+            <img class="logo" src="./img/logo.png" alt="logo-image">
+            
+            <div class="contact">
+                <h5>Contact</h5>
+            <p><span>Address</span>: naser city</p>
+            <p><span>Phone</span>: +201270857659</p>
+            <p><span>Hours</span> : From 10:00AM To 10:00PM </p>
+            </div>
+            <div class="follow">
+                <h5>
+                    Follow US
+                </h5>
+                <div class="social-media">
+                    <i  class="fa-brands fa-facebook"></i>
+                    <i  class="fa-brands fa-linkedin"></i>
+                    <i  class="fa-brands fa-whatsapp"></i>
+                    <i  class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+
+            <div class="About">
+                <h5>About</h5>
+                <p>About US</p>
+                <p>Delivery information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+        <div class="account"> 
+            <h5>My Account</h5>
+            <p>Sign in</p>
+            <p>View Cart</p>
+            <p> My Wishlist</p>
+            <p>track My Order</p>
+            <p>Help</p>
+        </div>
+        <div class="install">
+            <h5>Install App</h5>
+            <p>From App Store or Google play</p>
+
+            <div>
+                <img src="./img/pay/app.jpg"  alt="payment-image">
+                <img src="./img/pay/play.jpg" alt="payment-image">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <div>
+                <img class="pay" src="./img/pay/pay.png" alt="payment-image">
+            </div>
+        </div>
+        </div>
+        <p class="copyRight">2025,HTML CSS Ecommence templete</p>
+
+    </footer>
+
+        <script>
+      let menuDown = document.getElementsByClassName("down-menu")[0];
+      let menu = document.querySelector(".fa-square-caret-down");
+      let blogContainer=document.querySelector(".blog");
+
+
+
+      function Menu() {
+
+
+        menuDown.classList.add("toggle");
+
+        if (menu.classList.contains("fa-square-caret-down")) {
+          // إذا كانت الأيقونة تشير إلى "سهم لأسفل"، اعرض القائمة وبدّل الأيقونة
+          menuDown.classList.remove("toggle");
+          menu.classList.remove("fa-square-caret-down");
+          menu.classList.add("fa-square-caret-up");
+        } else {
+          menuDown.classList.add("toggle");
+          menu.classList.remove("fa-square-caret-up");
+          menu.classList.add("fa-square-caret-down");
+        }
+      }
+
+
+    </script>
+  </body>
+</html>

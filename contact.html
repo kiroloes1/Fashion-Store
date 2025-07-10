@@ -54,6 +54,60 @@
 
     <!-- Favicon -->
     <link rel="icon" href="./img/f1.ico" />
+
+    <style>
+            .banner{
+            margin-top: 3.8em;
+            background: url('./img/about/banner.png');
+            min-height: 30vh;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            margin-bottom:5em;
+        }
+              .banner h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            min-height: 30vh;
+            font-weight: 700;
+            color: aliceblue;
+            font-size: 2.5em;
+        }
+
+        .location-section {
+  padding: 2em;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.map-container {
+  margin-top: 1em;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.btn-map {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.75em 1.5em;
+  background-color: #222;
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-map:hover {
+  background-color: #16a86c;
+  transform: translateY(-3px);
+}
+
+    </style>
   </head>
 
 
@@ -82,11 +136,11 @@
 
         <i  class="fa-solid fa-square-caret-down menu" onclick="Menu()"></i>
         <ul class="nav-links">
-          <li><a class="home-link-navigation" href="index.html">Home</a></li>
+          <li><a  href="index.html">Home</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a class="home-link-navigation" href="contact.html">Contact</a></li>
           <li>
             <a href="cart.html" class="cart-icon" aria-label="View Cart">
               <i class="fa-solid fa-cart-arrow-down"></i>
@@ -98,6 +152,38 @@
 
 
     <main>
+
+         <section class="banner">
+            <h2>#let's_talk</h2>
+         </section>
+         
+         
+             <section class="location-section">
+  <h2>Visit Our Store</h2>
+  <p>We’re located at the heart of Cairo, come and explore our latest fashion collections.</p>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.0162974521545!2d31.27862711511524!3d30.07376302471769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fcdf761ce91%3A0xaad727b21debd3a5!2z2KfZhNmF2YTZitipINin2YTYp9mE2KfZhdiMINmF2K3ZhNmK2Kkg2KfZhNmF2LXYqSDYp9mE2YPZg9iz2YUg2YXYp9mG2KfYqg!5e0!3m2!1sar!2seg!4v1654162363161!5m2!1sar!2seg" 
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+
+  </div>
+      <a 
+  href="https://www.google.com/maps/place/Ain+Shams+University/" 
+  target="_blank" 
+  class="btn-map">
+  Open in Google Maps
+</a>
+</section>
+
+      
+
        <section class="signup">
         <div class="container">
           <div class="signuptext">

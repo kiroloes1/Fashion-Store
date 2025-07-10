@@ -12,7 +12,8 @@
     justify-content: center;
     background-color: #e4e4f4 ;
     z-index: 1000000;
-    position: relative;
+    position: fixed;
+    width: 100%;
     top: 63px;
     box-shadow: 0 2px 12px rgba(128, 128, 128, 0.336);
     border-radius: 10px;

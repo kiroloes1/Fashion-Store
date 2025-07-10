@@ -1,6 +1,33 @@
 let productDisplay=document.getElementsByClassName("container")[0];
 let NewproductDisplay=document.getElementsByClassName("container")[1];
-console.log(NewproductDisplay)
+let menuDown=document.getElementsByClassName("down-menu")[0];
+console.log(menuDown)
+let menu=document.querySelector(".fa-square-caret-down");
+
+
+function Menu(){
+  menuDown.classList.add("toggle");
+
+  if (menu.classList.contains("fa-square-caret-down")) {
+    // إذا كانت الأيقونة تشير إلى "سهم لأسفل"، اعرض القائمة وبدّل الأيقونة
+    menuDown.classList.remove("toggle");
+    menu.classList.remove("fa-square-caret-down");
+    menu.classList.add("fa-square-caret-up");
+  } else {
+   
+    menuDown.classList.add("toggle");
+    menu.classList.remove("fa-square-caret-up");
+    menu.classList.add("fa-square-caret-down");
+  }
+}
+  
+
+
+
+
+
+
+
 let products = [
   {image:"./img/products/n8.jpg" , name: "Cartoon Astronaut T-shirt", price: 78 },
   {image:"./img/products/n7.jpg" , name: "Retro Space Hoodie", price: 120 },

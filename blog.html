@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AstroWear | Space-Themed Fashion Store</title>
+
+    <!-- SEO Description -->
+    <meta
+      name="description"
+      content="Explore the latest in space-inspired fashion at AstroWear. Shop premium quality t-shirts, hoodies, caps, and more. Fast shipping and secure checkout."
+    />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="AstroWear | Space-Inspired Clothing & Accessories"
+    />
+    <meta
+      property="og:description"
+      content="Discover unique, high-quality apparel with a cosmic twist. From galaxy tees to astronaut hoodies – AstroWear has something for every space enthusiast."
+    />
+    <meta property="og:image" content="./img/logo.png" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Animate on Scroll -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      main #view-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: url("./img/banner/b19.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        min-height: 30vh;
+      }
+      main #view-image h2 {
+        font-size: 1.7em;
+        color: aliceblue;
+      }
+      main #view-image p {
+        font-size: 0.8em;
+        color: rgba(240, 255, 255, 0.534);
+      }
+      
+      .blog .card{
+          display: flex;
+          justify-content:space-evenly;
+          flex-wrap: wrap;
+          align-items: center;
+          position: relative;
+          margin-top: 8em;
+          margin-bottom: 4em;
+          
+      }
+      .blog .card .number{
+        position: absolute;
+        top: -80px;
+        font-size: 5em;
+        z-index: -1000;
+        color: rgb(134, 134, 134);
+      }
+      .blog .card .left-side img{
+            border-radius:10px ;
+           width: 25em;
+   
+   
+      }
+      .blog .card .right-side{
+       width: 40vw;
+       background-color: rgba(231, 231, 230, 0.466);
+       padding: 20px 40px;
+       border-radius: 10px;
+       box-shadow: 0 3px 12px rgba(128, 128, 128, 0.144);
+      }
+     .blog .card .right-side h4{
+        font-size: 1.7em;
+        font-weight: 600;
+        margin-top: 3px;
+     }
+
+    .blog .card .right-side p{
+        font-size: 0.9em;
+        font-weight: 500;
+        color: rgba(0, 8, 15, 0.692);
+        margin-top: 3px;
+        margin-bottom: 5px;
+     }
+      .blog .card .right-side a{
+        display: flex;
+        justify-content: center;
+        margin-top: 3px;
+        text-decoration: none;
+        background-color: rgb(9, 135, 219);
+        padding: 5px 0;
+        border-radius: 5px;
+        color: rgb(249, 250, 250);
+        font-size: 1.2em;
+        font-weight: 600;
+     }
+
+     @media (max-width:740px) {
+
+              .blog .card .right-side a{
+ 
+        font-size: 1em;
+        font-weight: 400;
+     }
+           .blog .card{
+          display: flex;
+          justify-content:space-evenly;
+          flex-wrap: wrap;
+          align-items: center;
+      }
+      /* .blog .card .left-side{
+
+      } */
+      .blog .card .right-side{
+       width: 80%;
+       margin-left: auto;
+       margin-right:auto ;
+       margin: 1em 0;
+    
+      }
+         .blog .card .left-side img{
+            
+           width: 20em;
+   
+   
+      }
+     }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/f1.ico" />
+  </head>
+
+  <body>
+    <div class="down-menu toggle">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-icon" aria-label="View Cart">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./img/logo.png" alt="logo_image" />
+        </div>
+
+        <i class="fa-solid fa-square-caret-down menu" onclick="Menu()"></i>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a class="home-link-navigation" href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon" aria-label="View Cart">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section style="margin-top: 4em" id="view-image">
+        <h2># readmore</h2>
+        <p>read all case studies about our products</p>
+      </section>
+
+      <section class="blog">
+        
+   
+        
+      </section>
+
+      <section class="signup">
+        <div class="container">
+          <div class="signuptext">
+            <h4>Sign Up For Newsletters</h4>
+            <p>
+              Get E-mail updates about our latest shop and
+              <span>special offers</span>
+            </p>
+          </div>
+          <form action="">
+            <input
+              class="email"
+              type="email"
+              placeholder="Your email address"
+              required
+            />
+            <input class="button" type="sumit" value="Sign Up" />
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div>
+          <img class="logo" src="./img/logo.png" alt="logo-image" />
+
+          <div class="contact">
+            <h5>Contact</h5>
+            <p><span>Address</span>: naser city</p>
+            <p><span>Phone</span>: +201270857659</p>
+            <p><span>Hours</span> : From 10:00AM To 10:00PM</p>
+          </div>
+          <div class="follow">
+            <h5>Follow US</h5>
+            <div class="social-media">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="About">
+            <h5>About</h5>
+            <p>About US</p>
+            <p>Delivery information</p>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>Contact Us</p>
+          </div>
+        </div>
+        <div class="account">
+          <h5>My Account</h5>
+          <p>Sign in</p>
+          <p>View Cart</p>
+          <p>My Wishlist</p>
+          <p>track My Order</p>
+          <p>Help</p>
+        </div>
+        <div class="install">
+          <h5>Install App</h5>
+          <p>From App Store or Google play</p>
+
+          <div>
+            <img src="./img/pay/app.jpg" alt="payment-image" />
+            <img src="./img/pay/play.jpg" alt="payment-image" />
+          </div>
+          <p>Secured Payment Gateways</p>
+          <div>
+            <img class="pay" src="./img/pay/pay.png" alt="payment-image" />
+          </div>
+        </div>
+      </div>
+      <p class="copyRight">2025,HTML CSS Ecommence templete</p>
+    </footer>
+
+   
+    <script>
+      let menuDown = document.getElementsByClassName("down-menu")[0];
+      let menu = document.querySelector(".fa-square-caret-down");
+      let blogContainer=document.querySelector(".blog");
+let blog = [
+  {
+    imageSrc: "./img/blog/b1.jpg",
+    title: "Top 5 Summer Fashion Trends in 2025",
+    description: "Discover the hottest styles dominating the summer of 2025. From pastel shades to oversized shirts, here’s what’s trending this season.",
+  },
+
+  {
+    imageSrc: "./img/blog/b3.jpg",
+    title: "The Ultimate Guide to Sustainable Fashion",
+    description: "Go green without sacrificing style. Explore eco-friendly brands, materials, and shopping tips that make a difference.",
+  },
+  {
+    imageSrc: "./img/blog/b4.jpg",
+    title: "Must-Have Wardrobe Essentials for Every Closet",
+    description: "Building your perfect wardrobe? Here are 10 timeless pieces every fashion lover should own for effortless styling.",
+  },
+  {
+    imageSrc: "./img/blog/b5.jpg",
+    title: "Behind the Scenes: How We Create Our Fashion Collections",
+    description: "Take a peek inside our design studio and learn how our seasonal collections come to life—from sketch to storefront.",
+  },
+  {
+    imageSrc: "./img/blog/b6.jpg",
+    title: "Why Accessories Can Transform Your Outfit",
+    description: "From bold earrings to minimalist belts, the right accessories can take your outfit from average to stunning in seconds.",
+  }
+];
+
+
+      function Menu() {
+
+
+        menuDown.classList.add("toggle");
+
+        if (menu.classList.contains("fa-square-caret-down")) {
+          // إذا كانت الأيقونة تشير إلى "سهم لأسفل"، اعرض القائمة وبدّل الأيقونة
+          menuDown.classList.remove("toggle");
+          menu.classList.remove("fa-square-caret-down");
+          menu.classList.add("fa-square-caret-up");
+        } else {
+          menuDown.classList.add("toggle");
+          menu.classList.remove("fa-square-caret-up");
+          menu.classList.add("fa-square-caret-down");
+        }
+      }
+
+      function displayBlog(){
+          let display=``;
+          blog.forEach((bProduct ,i)=>{
+            display+=`
+                   <div class="card">
+            <div class="left-side"> 
+                   <p class="number">${i+1}</p>
+            <img  src=${bProduct.imageSrc} alt="">
+            </div>
+            
+            <div class="right-side">
+                 <h4>${bProduct.title}</h4>
+                 <p>${bProduct.description}</p>
+                 <a href="shop.html">Shopping</a>    
+            </div>
+      
+          </div>
+            `
+          });
+          blogContainer.innerHTML=display;
+      }
+      displayBlog();
+    </script>
+  </body>
+</html>

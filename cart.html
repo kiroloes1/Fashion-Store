@@ -54,24 +54,344 @@
 
     <!-- Favicon -->
     <link rel="icon" href="./img/f1.ico" />
+
+    <style>
+      .banner {
+        margin-top: 3.8em;
+        background: url("./img/about/banner.png");
+        min-height: 30vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        margin-bottom: 5em;
+      }
+      .banner h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        min-height: 30vh;
+        font-weight: 700;
+        color: aliceblue;
+        font-size: 2.5em;
+      }
+
+      .cart-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5em;
+      }
+
+      .cart-container {
+        width: 100%;
+        max-width: 1200px;
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      }
+
+      thead {
+        background-color: #f0f8ff;
+      }
+
+      thead th {
+        text-align: center;
+        padding: 15px;
+        font-weight: bold;
+      }
+
+      thead .remove {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      thead .quantity {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      tbody tr {
+        text-align: center;
+        background-color: #fafafa;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      tbody td {
+        padding: 15px;
+      }
+
+      tbody img {
+        width: 60px;
+        height: auto;
+        border-radius: 5px;
+      }
+      .cart-section table {
+        border-collapse: collapse;
+        width: 100%;
+        font-family: "Arial", sans-serif;
+        font-size: 16px;
+        color: #333;
+      }
+
+      .cart-section th,
+      .cart-section td {
+        padding: 15px 10px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .cart-section thead {
+        background-color: #f8f8f8;
+        font-weight: bold;
+        color: #444;
+      }
+
+      .cart-section tbody tr {
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        transition: background 0.3s;
+      }
+
+      .cart-section tbody tr:hover {
+        background-color: #f0f0f0;
+      }
+
+      .cart-section td img {
+        width: 60px;
+        height: auto;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .cart-section td i.fa-trash {
+        color: #ff4d4d;
+        cursor: pointer;
+        font-size: 18px;
+        transition: color 0.3s;
+      }
+
+      .cart-section td i.fa-trash:hover {
+        color: #cc0000;
+      }
+
+      .quantity-cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .qty-value {
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      tbody i.fa-trash {
+        color: #dc3545;
+        cursor: pointer;
+        transition: color 0.3s;
+      }
+
+      tbody i.fa-trash:hover {
+        color: #a71d2a;
+      }
+
+
+      .quantity-cell {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .qty-btn {
+        min-width: 30px;
+        height: 30px;
+        font-size: 18px;
+        background-color: #eee;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      .qty-btn:hover {
+        background-color: #ddd;
+      }
+
+      .qty-value {
+        min-width: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      .cart-section td.price {
+        color: green;
+        font-weight: bold;
+      }
+      .cart-section td.product-title {
+        font-weight: bold;
+      }
+
+      .cart-summary {
+  width:50vw;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-top: 2em;
+  border-radius: 10px;
+  
+  font-family: Arial, sans-serif;
+  margin-bottom: 5em;
+}
+
+.cart-summary h3 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  color: #333;
+}
+
+.cart-summary p {
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #444;
+}
+
+.cart-summary-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5em;
+}
+
+.cart-summary .confirm-btn {
+  background-color: green;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-summary .cancel-btn {
+  background-color: crimson;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-summary .confirm-btn:hover {
+  background-color: darkgreen;
+}
+
+.cart-summary .cancel-btn:hover {
+  background-color: darkred;
+}
+
+
+      /* Responsive */
+      @media screen and (max-width: 768px) {
+        thead {
+          display: none;
+        }
+
+        table,
+        tbody,
+        tr,
+        td {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        tr {
+          width: 98%;
+        }
+
+        tr {
+          margin-bottom: 1em;
+          border: 1px solid #ddd;
+          padding: 1em;
+          border-radius: 10px;
+          background: #fff;
+        }
+
+        td {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 5px;
+          text-align: left;
+        }
+
+        td::before {
+          content: attr(data-label);
+          font-weight: bold;
+          flex-basis: 40%;
+        }
+
+        td img {
+          max-width: 80px;
+        }
+
+        input[type="number"] {
+          width: 50px;
+        }
+        .quantity-cell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          width: 800px;
+          flex-direction: column-reverse;
+        }
+             .cart-summary {
+  width:80vw;}
+      }
+      @media (max-width:1400px) {
+                    .cart-summary {
+  width:80vw;}
+      }
+        
+      }
+    </style>
   </head>
 
-
   <body>
-
     <div class="down-menu toggle">
-          <ul class="nav-links">
-          <li><a class="home-link-navigation" href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="cart.html" class="cart-icon" aria-label="View Cart">
-              <i class="fa-solid fa-cart-arrow-down"></i>
-            </a>
-          </li>
-        </ul>
+      <ul class="nav-links">
+        <li><a class="home-link-navigation" href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="cart.html" class="cart-icon" aria-label="View Cart">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <header>
@@ -80,15 +400,20 @@
           <img src="./img/logo.png" alt="logo_image" />
         </div>
 
-        <i  class="fa-solid fa-square-caret-down menu" onclick="Menu()"></i>
+        <i class="fa-solid fa-square-caret-down menu" onclick="Menu()"></i>
         <ul class="nav-links">
-          <li><a class="home-link-navigation" href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li>
-            <a href="cart.html" class="cart-icon" aria-label="View Cart">
+            <a
+              class="home-link-navigation"
+              href="cart.html"
+              class="cart-icon"
+              aria-label="View Cart"
+            >
               <i class="fa-solid fa-cart-arrow-down"></i>
             </a>
           </li>
@@ -96,10 +421,74 @@
       </nav>
     </header>
 
+    <main>
+      <section class="banner">
+        <h2>#let's_talk</h2>
+      </section>
 
+      <section class="cart-section">
+        <div class="cart-container">
+          <table>
+            <thead>
+              <tr>
+                <th class="remove">Remove</th>
+                <th>Image</th>
+                <th class="product">Product</th>
+                <th>Price</th>
+                <th class="quantity">Quantity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><i class="fa-solid fa-trash"></i></td>
+                <td><img src="./img/products/f1.jpg" alt="product" /></td>
+                <td class="product-title">Modern Fashion T-Shirt</td>
+                <td class="price">$125.5</td>
+                <td class="quantity-cell">
+                  <button class="qty-btn minus">−</button>
+                  <span class="qty-value">1</span>
+                  <button class="qty-btn plus">+</button>
+                </td>
+              </tr>
+              <tr>
+                <td><i class="fa-solid fa-trash"></i></td>
+                <td><img src="./img/products/f2.jpg" alt="product" /></td>
+                <td class="product-title">Casual Hoodie</td>
+                <td class="price">$99.0</td>
+                <td class="quantity-cell">
+                  <button class="qty-btn minus">−</button>
+                  <span class="qty-value">1</span>
+                  <button class="qty-btn plus">+</button>
+                </td>
+              </tr>
+              <tr>
+                <td><i class="fa-solid fa-trash"></i></td>
+                <td><img src="./img/products/f3.jpg" alt="product" /></td>
+                <td class="product-title">Streetwear Jacket</td>
+                <td class="price">$145.75</td>
+                <td class="quantity-cell">
+                  <button class="qty-btn minus">−</button>
+                  <span class="qty-value">1</span>
+                  <button class="qty-btn plus">+</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-<main>
-       <section class="signup">
+            <section class="cart-summary">
+        <h3>Order Summary</h3>
+        <p><strong>Total Items:</strong> <span id="total-items">3</span></p>
+        <p>
+          <strong>Total Price:</strong> <span id="total-price">$376.5</span>
+        </p>
+        <div class="cart-summary-buttons">
+          <button class="confirm-btn">Confirm Order</button>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </section>
+      <section class="signup">
         <div class="container">
           <div class="signuptext">
             <h4>Sign Up For Newsletters</h4>
@@ -119,81 +508,73 @@
           </form>
         </div>
       </section>
-</main>
-   
+
+
+    </main>
 
     <footer>
-        <div class="container">
+      <div class="container">
         <div>
-            <img class="logo" src="./img/logo.png" alt="logo-image">
-            
-            <div class="contact">
-                <h5>Contact</h5>
+          <img class="logo" src="./img/logo.png" alt="logo-image" />
+
+          <div class="contact">
+            <h5>Contact</h5>
             <p><span>Address</span>: naser city</p>
             <p><span>Phone</span>: +201270857659</p>
-            <p><span>Hours</span> : From 10:00AM To 10:00PM </p>
+            <p><span>Hours</span> : From 10:00AM To 10:00PM</p>
+          </div>
+          <div class="follow">
+            <h5>Follow US</h5>
+            <div class="social-media">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-brands fa-instagram"></i>
             </div>
-            <div class="follow">
-                <h5>
-                    Follow US
-                </h5>
-                <div class="social-media">
-                    <i  class="fa-brands fa-facebook"></i>
-                    <i  class="fa-brands fa-linkedin"></i>
-                    <i  class="fa-brands fa-whatsapp"></i>
-                    <i  class="fa-brands fa-instagram"></i>
-                </div>
-            </div>
+          </div>
         </div>
-
 
         <div>
-
-            <div class="About">
-                <h5>About</h5>
-                <p>About US</p>
-                <p>Delivery information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-                <p>Contact Us</p>
-            </div>
+          <div class="About">
+            <h5>About</h5>
+            <p>About US</p>
+            <p>Delivery information</p>
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>Contact Us</p>
+          </div>
         </div>
-        <div class="account"> 
-            <h5>My Account</h5>
-            <p>Sign in</p>
-            <p>View Cart</p>
-            <p> My Wishlist</p>
-            <p>track My Order</p>
-            <p>Help</p>
+        <div class="account">
+          <h5>My Account</h5>
+          <p>Sign in</p>
+          <p>View Cart</p>
+          <p>My Wishlist</p>
+          <p>track My Order</p>
+          <p>Help</p>
         </div>
         <div class="install">
-            <h5>Install App</h5>
-            <p>From App Store or Google play</p>
+          <h5>Install App</h5>
+          <p>From App Store or Google play</p>
 
-            <div>
-                <img src="./img/pay/app.jpg"  alt="payment-image">
-                <img src="./img/pay/play.jpg" alt="payment-image">
-            </div>
-            <p>Secured Payment Gateways</p>
-            <div>
-                <img class="pay" src="./img/pay/pay.png" alt="payment-image">
-            </div>
+          <div>
+            <img src="./img/pay/app.jpg" alt="payment-image" />
+            <img src="./img/pay/play.jpg" alt="payment-image" />
+          </div>
+          <p>Secured Payment Gateways</p>
+          <div>
+            <img class="pay" src="./img/pay/pay.png" alt="payment-image" />
+          </div>
         </div>
-        </div>
-        <p class="copyRight">2025,HTML CSS Ecommence templete</p>
-
+      </div>
+      <p class="copyRight">2025,HTML CSS Ecommence templete</p>
     </footer>
 
-        <script>
+    <script>
       let menuDown = document.getElementsByClassName("down-menu")[0];
       let menu = document.querySelector(".fa-square-caret-down");
-      let blogContainer=document.querySelector(".blog");
-
-
+      let blogContainer = document.querySelector(".blog");
 
       function Menu() {
-
-
         menuDown.classList.add("toggle");
 
         if (menu.classList.contains("fa-square-caret-down")) {
@@ -207,8 +588,6 @@
           menu.classList.add("fa-square-caret-down");
         }
       }
-
-
     </script>
   </body>
 </html>

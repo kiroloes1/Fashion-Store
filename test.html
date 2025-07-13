@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <br>
+
+    <!-- form -->
+    <form action="registration.php" method="post">
+        <!-- user name -->
+        <div>
+           <label for="Name">Name</label>
+           <input type="text" placeholder="user name" id="Name" name="Name" required title="please enter Your name">
+        </div>
+        <br>
+
+        <!-- email -->
+           <div>
+           <label for="Email">Email</label>
+           <input type="email" placeholder="E-mail" id="Email" name="Email" required title="please enter Your Email">
+        </div>
+        <br>
+
+            <!-- tel -->
+           <div>
+           <label for="Tel">Tel</label>
+           <input type="tel" placeholder="+201270857659" id="Tel" name="Tel" required title="please enter Your phone number">
+        </div>
+        <br>
+
+        <!-- selection -->
+         <select name="Type of Event" id="Event">
+            <option value="none">-----select-----</option>
+            <option value="click">click</option>
+            <option value="blur">blur</option>
+            <option value="focus">focus</option>
+         </select>
+         <br>
+         <br>
+
+         <!-- radio button -->
+          <div>
+            <label for="HTML">HTML</label>
+            <input type="radio" name="front-end"  id="HTML" value="HTML">
+             <label for="CSS">CSS</label>
+            <input type="radio" name="front-end"  id="CSS"value="CSS">
+             <label for="JS">JS</label>
+            <input type="radio" name="front-end"  id="JS"value="JS">
+          </div>
+          <br>
+
+              <!--checkbox -->
+          <div>
+            <label for="py">JS</label>
+            <input type="checkbox" name="front-end" id="py" value="python">
+            <label for="ja">JS</label>
+            <input type="checkbox" name="front-end" id="ja" value="java">
+            <label for="C">JS</label>
+            <input type="checkbox" name="front-end" id="C" value="C++">
+          </div>
+          <br>
+
+          <input type="submit" value="Register Now">
+
+    </form>
+</body>
+</html>

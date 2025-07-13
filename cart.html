@@ -188,6 +188,7 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
+       
       }
 
       .qty-value {
@@ -201,13 +202,18 @@
       tbody i.fa-trash {
         color: #dc3545;
         cursor: pointer;
-        transition: color 0.3s;
+       
+        
+        background-color: #d8d3d354;
+        padding: 0.5em;
+        
       }
 
       tbody i.fa-trash:hover {
-        color: #a71d2a;
+        
+        
+        color:white;
       }
-
 
       .quantity-cell {
         display: flex;
@@ -239,6 +245,12 @@
         font-weight: bold;
         font-size: 16px;
       }
+      .cart-section {
+        margin: 0 0.5em;
+        display: flex;
+        align-items: center;
+      }
+    
       .cart-section td.price {
         color: green;
         font-weight: bold;
@@ -248,68 +260,69 @@
       }
 
       .cart-summary {
-  width:50vw;
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  
-  background-color: #f7f7f7;
-  padding: 20px;
-  margin-top: 2em;
-  border-radius: 10px;
-  
-  font-family: Arial, sans-serif;
-  margin-bottom: 5em;
-}
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
 
-.cart-summary h3 {
-  text-align: center;
-  margin-bottom: 1em;
-  font-size: 1.3em;
-  color: #333;
-}
+        background-color: #f7f7f7;
+        padding: 20px;
+        margin-top: 2em;
+        border-radius: 10px;
 
-.cart-summary p {
-  font-size: 1.1em;
-  margin: 10px 0;
-  color: #444;
-}
+        font-family: Arial, sans-serif;
+        margin-bottom: 5em;
+      }
 
-.cart-summary-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1.5em;
-}
+      .cart-summary h3 {
+        text-align: center;
+        margin-bottom: 1em;
+        font-size: 1.3em;
+        color: #333;
+      }
 
-.cart-summary .confirm-btn {
-  background-color: green;
-  color: white;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+      .cart-summary p {
+        font-size: 1.1em;
+        margin: 10px 0;
+        color: #444;
+      }
 
-.cart-summary .cancel-btn {
-  background-color: crimson;
-  color: white;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+      .cart-summary-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5em;
+        align-items: center;
+        
+      }
 
-.cart-summary .confirm-btn:hover {
-  background-color: darkgreen;
-}
+      .cart-summary .confirm-btn {
+        background-color: green;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
 
-.cart-summary .cancel-btn:hover {
-  background-color: darkred;
-}
+      .cart-summary .cancel-btn {
+        background-color: crimson;
+        color: white;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
 
+      .cart-summary .confirm-btn:hover {
+        background-color: darkgreen;
+      }
+
+      .cart-summary .cancel-btn:hover {
+        background-color: darkred;
+      }
 
       /* Responsive */
       @media screen and (max-width: 768px) {
@@ -355,6 +368,10 @@
           max-width: 80px;
         }
 
+        tbody {
+        overflow: auto;
+        }
+
         input[type="number"] {
           width: 50px;
         }
@@ -366,19 +383,42 @@
           width: 800px;
           flex-direction: column-reverse;
         }
-             .cart-summary {
-  width:80vw;}
+        .cart-summary {
+          width: 80vw;
+        }
+        main{
+          margin: 0 0.1em;
+        }
       }
-      @media (max-width:1400px) {
-                    .cart-summary {
-  width:80vw;}
+      @media (max-width: 1400px) {
+        .cart-summary {
+          width: 80vw;
+        }
       }
-        
-      
+
+      .no{
+       display: none;
+       justify-content: center;
+       align-items: center;
+       height: 10vh;
+       width: 100%;
+       flex-wrap: wrap;
+       background-color: #cc000048;
+       margin-bottom: 5em;
+       color: white;
+       font-size: 1.2em;
+       font-weight: 600;
+      }
     </style>
   </head>
 
   <body>
+   
+    <div  class="cart">
+      remove Succsessful from yor cart
+    </div>
+        
+   
     <div class="down-menu toggle">
       <ul class="nav-links">
         <li><a class="home-link-navigation" href="index.html">Home</a></li>
@@ -438,51 +478,21 @@
                 <th class="quantity">Quantity</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td><i class="fa-solid fa-trash"></i></td>
-                <td><img src="./img/products/f1.jpg" alt="product" /></td>
-                <td class="product-title">Modern Fashion T-Shirt</td>
-                <td class="price">$125.5</td>
-                <td class="quantity-cell">
-                  <button class="qty-btn minus">−</button>
-                  <span class="qty-value">1</span>
-                  <button class="qty-btn plus">+</button>
-                </td>
-              </tr>
-              <tr>
-                <td><i class="fa-solid fa-trash"></i></td>
-                <td><img src="./img/products/f2.jpg" alt="product" /></td>
-                <td class="product-title">Casual Hoodie</td>
-                <td class="price">$99.0</td>
-                <td class="quantity-cell">
-                  <button class="qty-btn minus">−</button>
-                  <span class="qty-value">1</span>
-                  <button class="qty-btn plus">+</button>
-                </td>
-              </tr>
-              <tr>
-                <td><i class="fa-solid fa-trash"></i></td>
-                <td><img src="./img/products/f3.jpg" alt="product" /></td>
-                <td class="product-title">Streetwear Jacket</td>
-                <td class="price">$145.75</td>
-                <td class="quantity-cell">
-                  <button class="qty-btn minus">−</button>
-                  <span class="qty-value">1</span>
-                  <button class="qty-btn plus">+</button>
-                </td>
-              </tr>
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
       </section>
 
-            <section class="cart-summary">
+
+        <div class="no">
+      <p>no product add yet</p>
+     </div>
+      <section class="cart-summary">
+
         <h3>Order Summary</h3>
-        <p><strong>Total Items:</strong> <span id="total-items">3</span></p>
-        <p>
-          <strong>Total Price:</strong> <span id="total-price">$376.5</span>
-        </p>
+        <div class="content-summary">
+       
+        </div>
         <div class="cart-summary-buttons">
           <button class="confirm-btn">Confirm Order</button>
           <button class="cancel-btn">Cancel</button>
@@ -508,8 +518,6 @@
           </form>
         </div>
       </section>
-
-
     </main>
 
     <footer>
@@ -573,7 +581,18 @@
       let menuDown = document.getElementsByClassName("down-menu")[0];
       let menu = document.querySelector(".fa-square-caret-down");
       let blogContainer = document.querySelector(".blog");
+      let cartSection = document.querySelector("tbody");
+      let i = parseInt(localStorage.getItem("i"));
+      let x = parseInt(localStorage.getItem("w"));
+      let summaryContent=document.querySelector(".content-summary");
+      let cartSummary=document.querySelector(".cart-summary")
+      let noproduct=document.querySelector(".no")
+      let value;
 
+      let cartList = [];
+      cartList = JSON.parse(localStorage.getItem("cartList"))||[] ;
+     
+      
       function Menu() {
         menuDown.classList.add("toggle");
 
@@ -588,6 +607,106 @@
           menu.classList.add("fa-square-caret-down");
         }
       }
+
+let totalPrice=0;
+let totalItem=0
+
+
+      function display() {
+ 
+        let selectProduct = ``;
+        let summary=``;
+         totalPrice=0;
+ totalItem=0
+        cartList.forEach((e, i) => {
+          
+
+    totalItem+=e.num;
+    totalPrice+=e.price*e.num 
+
+          selectProduct += `
+    
+                  <tr>
+                <td><i onclick="Delete(${i}); pop2()" class="fa-solid fa-trash"></i></td>
+                <td><img src=${e.image} alt="product" /></td>
+                <td class="product-title">${e.name}</td>
+                <td class="price">$${e.price}</td>
+                <td class="quantity-cell">
+                  <button onclick="increment('-',${i})"  class="qty-btn minus">−</button>
+                  <span class="qty-value">${e.num}</span>
+                  <button onclick="increment('+',${i})" class="qty-btn plus">+</button>
+                </td>
+              </tr>
+              `;
+
+          summary=`
+           <p><strong>Total Items:</strong> <span id="total-items">${totalItem}</span></p>
+        <p>
+          <strong>Total Price:</strong> <span id="total-price">$${totalPrice}</span>
+        </p>
+          `
+          
+        });
+
+        summaryContent.innerHTML = summary;
+        cartSection.innerHTML = selectProduct;
+        value = document.getElementsByClassName("qty-value");
+      }
+      
+      display();
+
+      function Delete(i) {
+        cartList.splice(i, 1);
+        localStorage.setItem("cartList", JSON.stringify(cartList));
+        display();
+      }
+      function increment(char, i) {
+        
+
+        if (char === "+") {
+          value[i].textContent = ++cartList[i].num;
+          
+          localStorage.setItem("cartList",JSON.stringify(cartList))
+          
+        } else if (char === "-") {
+          if (cartList[i].num === 1) {
+            Delete(i);
+          } else {
+            value[i].textContent = --cartList[i].num
+            localStorage.setItem("cartList",JSON.stringify(cartList))
+          }
+        }
+
+        display()
+     
+      }
+
+    
+          if(cartList[0]==null){
+          cartSummary.style.display="none";
+          noproduct.style.display="flex"
+          
+      }
+      else{
+        cartSummary.style.display="flex";
+        noproduct.style.display="none"
+      }
+      
+function pop2(){
+  
+  // أولاً: بعد ثانيتين من الضغط على الزر، تظهر الـ popup
+  setTimeout(function () {
+    pop.style.display = "flex";
+
+    // ثانياً: بعد ثانيتين من ظهورها، تختفي
+    setTimeout(function () {
+      pop.style.display = "none";
+    }, 2000);
+
+  }, 0);
+}
+
+     
     </script>
   </body>
 </html>

@@ -1,7 +1,7 @@
 let productDisplay=document.getElementsByClassName("container")[0];
 let NewproductDisplay=document.getElementsByClassName("container")[1];
 let menuDown=document.getElementsByClassName("down-menu")[0];
-console.log(menuDown)
+
 let menu=document.querySelector(".fa-square-caret-down");
 
 
@@ -22,11 +22,6 @@ function Menu(){
 }
 
   
-
-
-
-
-
 
 
 let products = [
@@ -56,10 +51,10 @@ let newProducts = [
 function dispalyProduct(){
     let productCard=``;
     let newProductCard=``;
-products.forEach(product=>{
+products.forEach((product,i)=>{
     productCard+=`
             <div class="card">
-            <img src=${product.image} alt="product-image" />
+           <a onclick="getIndex(${i},-1)" href="selectProduct.html"> <img src=${product.image} alt="product-image" /></a>
             <div class="text-inner-card">
             <p>odidas</p>
             <h3>${product.name}</h3>
@@ -79,11 +74,11 @@ products.forEach(product=>{
     `
 });
 
-newProducts.forEach(newProduct => {
+newProducts.forEach((newProduct,x) => {
     newProductCard += `
         <div class="card">
-            <img src=${newProduct.image} alt="product-image" />
-            <div class="text-inner-card">
+           <a onclick="getIndex(-1,${x})" href="selectProduct.html"> <img src=${newProduct.image} alt="product-image" /></a>
+            <div  class="text-inner-card">
                 <p>odidas</p>
                 <h3>${newProduct.name}</h3>
                 <div class="stars">
@@ -106,4 +101,12 @@ productDisplay.innerHTML=productCard;
 NewproductDisplay.innerHTML=newProductCard;
 }
 dispalyProduct();
+
+function getIndex(i,x){
+localStorage.setItem("i",i);
+localStorage.setItem("w",x);
+}
+
+
+
 

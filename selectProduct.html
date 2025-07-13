@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>AstroWear | Space-Themed Fashion Store</title>
+
+    <!-- SEO Description -->
+    <meta
+      name="description"
+      content="Explore the latest in space-inspired fashion at AstroWear. Shop premium quality t-shirts, hoodies, caps, and more. Fast shipping and secure checkout."
+    />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta
+      property="og:title"
+      content="AstroWear | Space-Inspired Clothing & Accessories"
+    />
+    <meta
+      property="og:description"
+      content="Discover unique, high-quality apparel with a cosmic twist. From galaxy tees to astronaut hoodies – AstroWear has something for every space enthusiast."
+    />
+    <meta property="og:image" content="./img/logo.png" />
+    <meta property="og:url" content="https://yourdomain.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Animate on Scroll -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Animate.css Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/f1.ico" />
+  </head>
+
+
+  <body>
+
+    <div class="down-menu toggle">
+          <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon" aria-label="View Cart">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+            </a>
+          </li>
+        </ul>
+    </div>
+
+
+
+    <header>
+      <nav>
+        <a href="index.html" class="logo">
+          <img src="./img/logo.png" alt="logo_image" />
+        </a>
+
+        <i  class="fa-solid fa-square-caret-down menu" onclick="Menu()"></i>
+        <ul class="nav-links">
+          <li><a  href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a href="cart.html" class="cart-icon" aria-label="View Cart">
+              <i class="fa-solid fa-cart-arrow-down"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main class="main-select-product" style="margin: 6em 2em;">
+         <div class="pro-container">
+
+         </div>
+         
+        </div>
+        </main>
+
+
+    
+    <footer>
+        <div class="container">
+        <div>
+            <img class="logo" src="./img/logo.png" alt="logo-image">
+            
+            <div class="contact">
+                <h5>Contact</h5>
+            <p><span>Address</span>: naser city</p>
+            <p><span>Phone</span>: +201270857659</p>
+            <p><span>Hours</span> : From 10:00AM To 10:00PM </p>
+            </div>
+            <div class="follow">
+                <h5>
+                    Follow US
+                </h5>
+                <div class="social-media">
+                    <i  class="fa-brands fa-facebook"></i>
+                    <i  class="fa-brands fa-linkedin"></i>
+                    <i  class="fa-brands fa-whatsapp"></i>
+                    <i  class="fa-brands fa-instagram"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+
+            <div class="About">
+                <h5>About</h5>
+                <p>About US</p>
+                <p>Delivery information</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Conditions</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+        <div class="account"> 
+            <h5>My Account</h5>
+            <p>Sign in</p>
+            <p>View Cart</p>
+            <p> My Wishlist</p>
+            <p>track My Order</p>
+            <p>Help</p>
+        </div>
+        <div class="install">
+            <h5>Install App</h5>
+            <p>From App Store or Google play</p>
+
+            <div>
+                <img src="./img/pay/app.jpg"  alt="payment-image">
+                <img src="./img/pay/play.jpg" alt="payment-image">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <div>
+                <img class="pay" src="./img/pay/pay.png" alt="payment-image">
+            </div>
+        </div>
+        </div>
+        <p class="copyRight">2025,HTML CSS Ecommence templete</p>
+
+    </footer>
+
+
+    <script>
+
+let mainSelectProduct=document.getElementsByClassName("pro-container")[0];
+console.log(mainSelectProduct)
+let menuDown=document.getElementsByClassName("down-menu")[0];
+
+let menu=document.querySelector(".fa-square-caret-down");
+
+
+function Menu(){
+  menuDown.classList.add("toggle");
+
+  if (menu.classList.contains("fa-square-caret-down")) {
+    // إذا كانت الأيقونة تشير إلى "سهم لأسفل"، اعرض القائمة وبدّل الأيقونة
+    menuDown.classList.remove("toggle");
+    menu.classList.remove("fa-square-caret-down");
+    menu.classList.add("fa-square-caret-up");
+  } else {
+   
+    menuDown.classList.add("toggle");
+    menu.classList.remove("fa-square-caret-up");
+    menu.classList.add("fa-square-caret-down");
+  }
+}
+
+
+let i = parseInt(localStorage.getItem("i"));
+let x = parseInt(localStorage.getItem("w"));
+
+console.log(i)
+console.log(x)
+        
+let products = [
+  {image:"./img/products/n8.jpg" , name: "Cartoon Astronaut T-shirt", price: 78 },
+  {image:"./img/products/n7.jpg" , name: "Retro Space Hoodie", price: 120 },
+  {image:"./img/products/n6.jpg" , name: "Minimal Moon Tee", price: 65 },
+  {image:"./img/products/n5.jpg" , name: "Galaxy Print Sweatshirt", price: 95 },
+  {image:"./img/products/n4.jpg" , name: "Astronaut Mug", price: 35 },
+  {image:"./img/products/n3.jpg" , name: "Black Hole Cap", price: 40 },
+  {image:"./img/products/n2.jpg" , name: "Cosmic Socks Set", price: 25 },
+  {image:"./img/products/n1.jpg" , name: "Nebula Oversized Tee", price: 85 },
+
+];
+
+let newProducts = [
+  { image: "./img/products/f8.jpg", name: "Galaxy Rider T-shirt", price: 89 },
+  { image: "./img/products/f7.jpg", name: "Moonwalk Graphic Tee", price: 75 },
+  { image: "./img/products/f6.jpg", name: "Orbit Explorer Shirt", price: 99 },
+  { image: "./img/products/f5.jpg", name: "Starfield Casual Tee", price: 69 },
+  { image: "./img/products/f4.jpg", name: "Astronaut Drift T-shirt", price: 80 },
+  { image: "./img/products/f3.jpg", name: "Planet Hopper Tee", price: 72 },
+  { image: "./img/products/f2.jpg", name: "Rocket Journey T-shirt", price: 95 },
+  { image: "./img/products/f1.jpg", name: "Solar System T-shirt", price: 85 }
+
+];
+
+
+
+function display(){
+    let selectProduct=``;
+    if(i !== -1 && !isNaN(i)) {
+ 
+  
+    selectProduct=`
+          
+        <div class="image-product-container">
+            <img  src=${products[i].image} alt="selected-image">
+        </div>
+
+        <div class="text-product-container">
+            <h3>${products[i].name}</h3>
+            <p class="price">${products[i].price}$</p>
+            <select name="size" id="size">
+                <option value="small">Small</option>
+                <option value="meduim">Meduim</option>
+                <option value="large">Large</option>
+                 <option value="large">X-Large</option>
+                  <option value="large">2X</option>
+                  <option value="large">3X</option>
+                  <option value="large">4X</option>
+                  <option value="large">5X</option>
+
+            </select>
+            <div class="add-cart">
+                <input type="number" min="1" max="10" value="1">
+                <a href="#">Add to cart</a>
+            </div>
+            <div class="product-details">
+                <h3>product Details</h3>
+                <p>Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. Sint doloremque incidunt,
+                     vel eaque, alias suscipit, laborum non voluptate at 
+                     sapiente fuga hic qui. Sequi, eos rerum? Possimus expedita
+                      quasi voluptates ratione. Porro impedit ipsa ratione
+                     fugit ab quasi qui, nesciunt quisquam delectus ducimus!</p>
+            </div>
+        </div>
+       
+    `
+    }
+else if (x !== -1 && !isNaN(x)){
+
+  
+    selectProduct=`
+          
+        <div class="image-product-container">
+            <img  src=${newProducts[x].image} alt="selected-image">
+        </div>
+
+        <div class="text-product-container">
+            <h3>${newProducts[x].name}</h3>
+            <p class="price">${newProducts[x].price}$</p>
+            <select name="size" id="size">
+                <option value="small">Small</option>
+                <option value="meduim">Meduim</option>
+                <option value="large">Large</option>
+                 <option value="large">X-Large</option>
+                  <option value="large">2X</option>
+                  <option value="large">3X</option>
+                  <option value="large">4X</option>
+                  <option value="large">5X</option>
+
+            </select>
+            <div class="add-cart">
+                <input type="number" min="1" max="10" value="1">
+                <a href="#">Add to cart</a>
+            </div>
+            <div class="product-details">
+                <h3>product Details</h3>
+                <p>Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. Sint doloremque incidunt,
+                     vel eaque, alias suscipit, laborum non voluptate at 
+                     sapiente fuga hic qui. Sequi, eos rerum? Possimus expedita
+                      quasi voluptates ratione. Porro impedit ipsa ratione
+                     fugit ab quasi qui, nesciunt quisquam delectus ducimus!</p>
+            </div>
+        </div>
+       
+    `
+    }
+
+  
+  mainSelectProduct.innerHTML=selectProduct;
+}
+display();
+
+    </script>
+  </body>
+</html>
